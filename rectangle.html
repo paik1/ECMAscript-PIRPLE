@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ten Rectangles</title>
+    <style>
+        .rect {
+            height:50px;
+            width:100px;
+            margin:10px;
+        }
+        #rectangleWrapper{
+            padding: 50px;
+            padding-bottom: 0px;
+        }
+        .name{
+            margin-left: 35px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Ten Rectangles</h1>
+    <h2>This page contains 10 different rectangles with 10 different colors</h2>
+    <div id="rectangleWrapper">
+        <div id="rect1" class="rect"></div>
+        <div id="name1" class="name"></div>
+        <div id="rect2" class="rect"></div>
+        <div id="name2" class="name"></div>
+        <div id="rect3" class="rect"></div>
+        <div id="name3" class="name"></div>
+        <div id="rect4" class="rect"></div>
+        <div id="name4" class="name"></div>
+        <div id="rect5" class="rect"></div>
+        <div id="name5" class="name"></div>
+        <div id="rect6" class="rect"></div>
+        <div id="name6" class="name"></div>
+        <div id="rect7" class="rect"></div>
+        <div id="name7" class="name"></div>
+        <div id="rect8" class="rect"></div>
+        <div id="name8" class="name"></div>
+        <div id="rect9" class="rect"></div>
+        <div id="name9" class="name"></div>
+        <div id="rect10" class="rect"></div>
+        <div id="name10" class="name"></div>
+    </div>
+</body>
+<script>
+    const colArray = ["#E74C3C", "#7D3C98", "#2471A3", "#17A589", "#1E8449", "#F4D03F", "#F39C12", "#909497", "#2E4053", "#6E2C00"];
+    const rectCLass = document.querySelectorAll(".rect");
+    console.log("Here are the rectangle IDs");
+    for(i=0; i<rectCLass.length;i++){
+        document.getElementById("rect"+(i+1)).style.backgroundColor = colArray[i];
+        document.getElementById("name"+(i+1)).innerHTML = colArray[i];
+        document.getElementById("name"+(i+1)).style.color = colArray[i];
+        document.getElementById("name"+(i+1)).style.fontSize = "10px";   
+        console.log(rectCLass[i].id);
+    }
+</script>
+</html>
